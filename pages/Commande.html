@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/scripte.js"></script>
+</head>
+<style>
+    body a {
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    #page {
+        margin: 25px;
+    }
+
+    #compteur_pizza,
+    #compteur_burger,
+    #compteur_boisson {
+        width: 200px;
+    }
+
+    table {
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <center>
+        <a href="../index.html"><b>Cliquer ici pour retourner à l'accueil</b></a>
+        <p>En maintenant la touche contrôle enfoncée, vous pouvez effectuer plusieurs choix</p>
+        <br>
+        <div id="page">
+            <p id="demo"></p>
+            <div id="affichetotal">
+
+            </div>
+            <div id="affichepizza">
+
+            </div>
+            <div id="afficheburger">
+
+            </div>
+            <div id="afficheboisson">
+
+            </div>
+        </div>
+    </center>
+    <table border="1" id="francis" style="margin:20px;">
+        <form action="" method="post">
+            <tr>
+                <th>Pizza</th>
+                <th>Burger</th>
+                <th>Boissons</th>
+            </tr>
+            <tr>
+                <td>
+
+                    <select name="pizza" id="pizza" multiple size="3">
+                        <option value="0">Choisissez une Pizza</option>
+                        <option value="5">Margherita 5€ </option>
+                        <option value="6">La Reine 6€</option>
+                        <option value="7">Mozza 7€</option>
+                        <option value="5">4 Fromage 5€</option>
+                        <option value="10">Margherita (Menu)10€ </option>
+                        <option value="12">La Reine(Menu) 12€</option>
+                        <option value="14">Mozza 7€(Menu) 14€ </option>
+                        <option value="10">4 Fromage 5€(Menu) 10€ </option>
+                    </select>
+                    <input type="number" min="1" max="10" placeholder="Choisissez une quantité" witdh=100
+                        id="compteur_pizza">
+                </td>
+                <td>
+
+                    <select name="burger" id="burger" multiple size="3">
+                        <option value="0">Choisissez une Burger</option>
+                        <option value="5">Cheese Burger 5€</option>
+                        <option value="8">Baps 8€</option>
+                        <option value="6">Chicken 6€</option>
+                        <option value="16">Baps(Menu) 16€</option>
+                        <option value="12">Chicken (Menu)12€</option>
+                        <option value="10">Fish 5€(Menu)/option>
+                    </select>
+                    <input type="number" id="compteur_burger" min="1" max="10" placeholder="Choisissez une quantité">
+
+                </td>
+                <td>
+                    <select name="boisson" id="boisson" multiple size="3">
+                        <option value="0">Choisissez une Boisson</option>
+                        <option value="2">Coca-Cola 2€</option>
+                        <option value="2">Schweppes Agrume 2€</option>
+                        <option value="2">Fanta Lemon 2€</option>
+                        <option value="2">Sprite 2€</option>
+                    </select>
+                    <input type="number" id="compteur_boisson" min="1" max="10"
+                        placeholder="Choisissez une quantité"><br />
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Annuler la commande" onclick="history.go(0)" />
+                </td>
+            </tr>
+            <tr>
+                <td>Numero de carte:</td>
+                <td><input type="number" id="cb" placeholder="0000-0000-0000-0000" style="width:170px;"
+                        required="required" />
+                </td>
+
+                <td>Date d'expiration:</td>
+                <td><input type="number" id="date" placeholder="00/00" style="width:70px;" maxlength="4"
+                        required="required" />
+                </td>
+                <td>Cryptomagramme:</td>
+                <td><input type="number" id="crypto" placeholder="000" style="width:70px;" required="required" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Valider votre commande" onClick="Pizza()">
+                </td>
+            </tr>
+
+            </fieldset>
+            </center>
+        </form>
+        <!-- fin commande carte -->
+
+
+</body>
+
+</html>
